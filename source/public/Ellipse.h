@@ -16,13 +16,14 @@ public:
     long double semilatus_rectum() const;
     long double perimeter() const;
     long double area() const;
-    long double arc_length(long double x1, long double x2) const;
+    long double arc_length(long double t1, long double t2) const;
     long double slope(point p) const;
-    long double slope(long double x) const;
-    static inline long double degrees(long double m)
+    long double slope(long double t) const;
+    static inline long double degrees(long double slope)
     {
-        return 180.0L * atanl(m) / std::numbers::pi_v<long double>;
+        return 180.0L * atanl(slope) / std::numbers::pi_v<long double>;
     }
+    long double bin_search_x2(long double t1, long double lower_t2, long double upper_t2, long double target_arc_length, long double tolerance) const;
 private:
     long double _a, _b, _c;
 };

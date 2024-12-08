@@ -1,3 +1,15 @@
 bin/**
 build/**
 *.pdf
+**.vcxproj**
+**/CMakeFiles/**
+Makefile
+CMakeCache**
+/**Release/**
+cmake_install.cmake
+x64/**
+*.sln
+*.dir/**
+*.cmake
+*.tcl
+.vs/**
